@@ -1,0 +1,36 @@
+
+<!-- Insert inside the EXISTING #editModal, immediately after #editPreviewCanvas. -->
+<div class="form-row">
+  <label>
+    <input type="checkbox" id="aiTouchupToggle">
+    AI سوٹ اور فیس ٹچ اپ
+  </label>
+</div>
+
+<div class="form-row">
+  <label for="aiSuitSelector">سوٹ</label>
+  <select id="aiSuitSelector">
+    <option value="">سوٹ منتخب نہ کریں</option>
+  </select>
+</div>
+
+<div class="form-row">
+  <label>
+    جلد کی نرمی
+    <span id="aiSkinSmoothVal" class="ltr">30%</span>
+  </label>
+  <input type="range" id="aiSkinSmooth" min="0" max="100" value="30">
+</div>
+
+<div class="form-row">
+  <label>
+    جلد کی روشنی
+    <span id="aiSkinBrightVal" class="ltr">10%</span>
+  </label>
+  <input type="range" id="aiSkinBright" min="0" max="100" value="10">
+</div>
+
+<div class="modal-actions">
+  <button class="secondary-btn" id="aiRevertBtn">اصل تصویر واپس لائیں</button>
+  <button class="primary-btn" id="aiApplyBtn">AI لاگو کریں</button>
+</div>

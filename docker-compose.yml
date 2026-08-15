@@ -1,0 +1,14 @@
+
+services:
+  admission-photo-ai:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      FRONTEND_ORIGIN: "${FRONTEND_ORIGIN:-*}"
+      MAX_UPLOAD_BYTES: "${MAX_UPLOAD_BYTES:-15728640}"
+      MAX_IMAGE_PIXELS: "${MAX_IMAGE_PIXELS:-25000000}"
+      REQUEST_TIMEOUT_SECONDS: "${REQUEST_TIMEOUT_SECONDS:-45}"
+    volumes:
+      - ./assets:/app/assets:ro
+      - ./models:/app/models:ro
